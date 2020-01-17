@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author Rison_Lee on 2020/1/16 10:23.
@@ -18,6 +19,14 @@ public class User implements Serializable {
 
     private String userName;
 
-    private String name;
+    private String password;
+
+    private Integer sex;
+
+    private Integer isActive;
+
+    private Date createTime;
+
+    private Date updateTime;
 
 }
