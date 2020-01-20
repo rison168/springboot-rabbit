@@ -19,42 +19,46 @@ public class OrderRecordService {
 
     /**
      * 删除 by id
+     *
      * @param id
      * @return
      */
-    public int deleteByPrimaryKey(Integer id){
+    public int deleteByPrimaryKey(Integer id) {
         return orderRecordMapper.deleteById(id);
     }
 
     /**
      * 新增
+     *
      * @param record
      * @return
      */
-    public int insert(OrderRecord record){
+    public int insert(OrderRecord record) {
         return orderRecordMapper.insert(record);
 
     }
 
     /**
      * 查询 by id
+     *
      * @param id
      * @return
      */
-    public OrderRecord selectByPrimaryKey(Integer id){
+    public OrderRecord selectByPrimaryKey(Integer id) {
         return orderRecordMapper.selectById(id);
     }
 
     /**
      * 更新 by id
+     *
      * @param record
      * @return
      */
-    public int updateByPrimaryKey(OrderRecord record){
+    public int updateByPrimaryKey(OrderRecord record) {
         return orderRecordMapper.updateById(record);
     }
 
-    public List<OrderRecord> selectAll(){
+    public List<OrderRecord> selectAll() {
         return orderRecordMapper.selectList(new LambdaQueryWrapper<OrderRecord>());
     }
 }

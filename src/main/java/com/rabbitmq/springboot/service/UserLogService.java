@@ -17,38 +17,42 @@ public class UserLogService {
 
     /**
      * 删除 by id
+     *
      * @param id
      * @return
      */
-    public int deleteByPrimaryKey(Integer id){
-        return  userLogMapper.deleteById(id);
+    public int deleteByPrimaryKey(Integer id) {
+        return userLogMapper.deleteById(id);
     }
 
     /**
      * 新增
+     *
      * @param record
      * @return
      */
-    public int insert(UserLog record){
+    public int insert(UserLog record) {
         return userLogMapper.insert(record);
 
     }
 
     /**
      * 查询 by id
+     *
      * @param id
      * @return
      */
-    public UserLog selectByPrimaryKey(Integer id){
+    public UserLog selectByPrimaryKey(Integer id) {
         return userLogMapper.selectById(id);
     }
 
     /**
      * 更新 by id
+     *
      * @param record
      * @return
      */
-    public int updateByPrimaryKey(UserLog record){
+    public int updateByPrimaryKey(UserLog record) {
         return userLogMapper.updateById(record);
     }
 }

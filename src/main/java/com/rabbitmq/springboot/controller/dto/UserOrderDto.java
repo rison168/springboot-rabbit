@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserOrderDto implements Serializable{
+public class UserOrderDto implements Serializable {
 
     private String orderNo;
 

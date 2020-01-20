@@ -18,47 +18,52 @@ public class UserOrderService {
 
     /**
      * 删除
+     *
      * @param id
      * @return
      */
-    public int deleteByPrimaryKey(Integer id){
+    public int deleteByPrimaryKey(Integer id) {
         return userOrderMapper.deleteById(id);
     }
 
     /**
      * 新增
+     *
      * @param record
      * @return
      */
-    public int insert(UserOrder record){
+    public int insert(UserOrder record) {
         return userOrderMapper.insert(record);
     }
 
     /**
      * 查询
+     *
      * @param id
      * @return
      */
-    public UserOrder selectByPrimaryKey(Integer id){
+    public UserOrder selectByPrimaryKey(Integer id) {
         return userOrderMapper.selectById(id);
     }
 
     /**
      * 更新
+     *
      * @param record
      * @return
      */
-    public int updateByPrimaryKey(UserOrder record){
+    public int updateByPrimaryKey(UserOrder record) {
         return userOrderMapper.updateById(record);
     }
 
     /**
      * 查询 by id and status
+     *
      * @param id
      * @param status
      * @return
      */
-    public UserOrder selectByPkAndStatus(Integer id, Integer status){
+    public UserOrder selectByPkAndStatus(Integer id, Integer status) {
         return userOrderMapper.selectOne(new LambdaQueryWrapper<UserOrder>().eq(UserOrder::getId, id).eq(UserOrder::getStatus, status));
     }
 }
